@@ -3,6 +3,8 @@ experiments with microsoft phi3 vision language model. Image captioning, OCR, da
 
 # Environment setting
 
+The Phi-3-Vision-128K model uses flash attention, which requires certain types of GPU hardware to run. I test the model on a Nvidia A100 GPU
+
 
 1) conda create -n llm_images python=3.10
 
