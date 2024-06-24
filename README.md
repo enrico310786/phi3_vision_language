@@ -14,7 +14,7 @@ The Phi-3-Vision-128K model uses flash attention, which requires certain types o
 
 4) pip install packaging
 
-5) pip install pillow==10.3.0 chardet==5.2.0 flash_attn==2.5.8 accelerate==0.30.1 bitsandbytes==0.43.1 Requests==2.31.0 transformers==4.40.2 
+5) pip install pillow==10.3.0 chardet==5.2.0 flash_attn==2.5.8 accelerate==0.30.1 bitsandbytes==0.43.1 Requests==2.31.0 transformers==4.40.2 albumentations==1.3.1 opencv-contrib-python==4.10.0.84 matplotlib==3.9.0
 
 6) pip uninstall jupyter
 
@@ -25,3 +25,8 @@ The Phi-3-Vision-128K model uses flash attention, which requires certain types o
 9) pip install --upgrade 'nbconvert>=7' 'mistune>=2'
 
 10) pip install cchardet
+
+# Notebooks
+
+# Image transformations
+
