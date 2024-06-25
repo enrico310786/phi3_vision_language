@@ -69,15 +69,15 @@ if __name__ == "__main__":
     path_save_plot = os.path.join(dir_aligned_images, name_mod_image + "_matches.png")
     path_save_aligned_image = os.path.join(dir_aligned_images, file_mod_image)
 
-    # Caricamento delle immagini
+    # Load images
     image1 = load_image(path_standard_image)
     image2 = load_image(path_modified_image)
 
-    # Rilevamento dei keypoints e descrittori
+    # Find keypoints and descriptors
     keypoints1, descriptors1 = detect_and_compute_keypoints(image1)
     keypoints2, descriptors2 = detect_and_compute_keypoints(image2)
 
-    # Matching dei keypoints
+    # Matching keypoints
     matches = match_keypoints(descriptors1, descriptors2)
 
     print(f"Number of keypoints in the original image: {len(keypoints1)}")
@@ -87,14 +87,14 @@ if __name__ == "__main__":
     # Plot matching
     plot_matches(image1, image2, keypoints1, keypoints2, matches, path_save_plot)
 
-    # Estrazione dei punti corrispondenti
+    # Extract correspondences
     points1, points2 = get_matched_points(keypoints1, keypoints2, matches)
 
-    # Calcolo dell'omografia
+    # Calculate homography
     h = compute_homography(points1, points2)
 
-    # Rotazione e trasformazione della seconda immagine
+    # Rotation and transformation of the second image
     aligned_image2 = warp_image(image2, h, image1.shape)
 
-    # Salvataggio dell'immagine allineata
+    # Save the second image
     cv2.imwrite(path_save_aligned_image, aligned_image2)
