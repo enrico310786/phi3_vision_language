@@ -27,7 +27,7 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument('--path_original_image', type=str)
     parser.add_argument('--path_modified_image', type=str)
-    parser.add_argument('--to_gray', type=str2bool, default='no')
+    parser.add_argument('--to_gray', type=str2bool, default='false')
 
     opt = parser.parse_args()
     path_original_image = opt.path_original_image
